@@ -1,26 +1,23 @@
-//visibilidade | palavra chave | nome
-
 public class Quadrado{
     
-    //atributo
+    private int lado;
+
+    public Quadrado(int lado){
+        this.lado = lado;
+    }
     
-    //tipo | nome | valor
-    int lado = 2;
-    
-    // metodo
-    
-    //visibilidade | retorno | nome
-    
-    public int calcularArea(int lado){
+    public int calcularArea(){
         return lado * lado;
     }
     
-    public int calcularPerimetro(int l){
-        return 4*l;
+    public int calcularPerimetro(){
+        return lado * 4;
     }
     
-    public void imprimir(int A, int P){
-        System.out.print(A + " " + P);
+    public void imprimir(){
+        System.out.println("lado: " + lado);
+        System.out.println("area: " + calcularArea());
+        System.out.println("perimetro: " + calcularPerimetro());
     }
     
 }
