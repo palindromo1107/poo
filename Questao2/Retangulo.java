@@ -1,27 +1,26 @@
-//visibilidade | palavra chave | nome
-
 public class Retangulo{
-    
-    //atributo
-    
-    //tipo | nome | valor
-    int largura = 2;
-    int comprimento= 4;
-    
-    // metodo
-    
-    //visibilidade | retorno | nome
-    
-    public int calcularArea(int C, int L){
-        return C * L;
+
+    private int largura;
+    private int comprimento;
+
+    public Retangulo(int largura, int comprimento){
+        this.largura = largura;
+        this.comprimento = comprimento;
     }
     
-    public int calcularPerimetro(int L, int C){
-        return (2 * C) + (2 * L);
+    public int calcularArea(){
+        return comprimento * largura;
     }
     
-    public void imprimir(int A, int P){
-        System.out.print(A + " " + P);
+    public int calcularPerimetro(){
+        return (2 * comprimento) + (2 * largura);
+    }
+    
+    public void imprimir(){
+        System.out.println("comprimento: " + comprimento);
+        System.out.println("largura: " + largura);
+        System.out.println("area: " + calcularArea());
+        System.out.println("perimetro: " + calcularPerimetro());
     }
     
 }
